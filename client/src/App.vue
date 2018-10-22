@@ -1,28 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 class="title">Stat Tracker!</h1>
+    <div class="main">
+    <StatEntry />
+    <StatDisplay />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import StatEntry from "./components/StatEntry"
+import StatDisplay from "./components/StatDisplay"
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    StatEntry,
+    StatDisplay
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  height: 100%;
 }
+
+body { 
+ height: 100%
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #F1F3F4;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+
+.main {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center
+}
+
 </style>
